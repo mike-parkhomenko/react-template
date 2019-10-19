@@ -8,13 +8,13 @@ const initialState = {
 };
 
 const middlewares = [thunk];
-// const composeEnhancers = composeWithDevTools({});
+const composeEnhancers = composeWithDevTools({});
 
 const store = createStore(
   app,
   initialState,
-  compose(applyMiddleware(...middlewares))
-  // composeEnhancers(applyMiddleware(...middlewares))
+  // compose(applyMiddleware(...middlewares))
+  composeEnhancers(applyMiddleware(...middlewares))
 );
 
 export default store;

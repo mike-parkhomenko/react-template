@@ -3,13 +3,11 @@ import { connect } from "react-redux";
 import App from "containers/App";
 import Routes from "routes/router";
 import { Router } from "react-router-dom";
-import createHistory from "history/createBrowserHistory";
-
-const history = createHistory();
+import { createBrowserHistory } from "history";
 
 function Root() {
   return (
-    <Router history={history}>
+    <Router history={createBrowserHistory()}>
       <App>
         <Routes />
       </App>
