@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { testFetch } from "modules/app/actions";
 
-function App() {
+function App(props) {
+  useEffect(() => {
+    props.testFetch();
+  });
+
   return <div>App</div>;
 }
 
-export default App;
+export default connect(
+  null,
+  { testFetch }
+)(App);
