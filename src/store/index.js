@@ -14,7 +14,6 @@ const composeEnhancers = composeWithDevTools({});
 const store = createStore(
   reducers,
   initialState,
-  // compose(applyMiddleware(...middlewares))
   composeEnhancers(applyMiddleware(...middlewares))
 );
 
