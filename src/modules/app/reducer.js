@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export default (state = initialState, action = {}) => {
-  switch (action.payload) {
+  switch (action.type) {
     case DEFAULT_ACTION:
       return { ...state, msg: action.payload };
 

@@ -8,8 +8,9 @@ export const defaultAction = () => {
 
 export const testFetch = () => async dispatch => {
   try {
-    const data = await fetch("https://jsonplaceholder.typicode.com/posts");
-    await data.json();
+    const data = await fetch("https://jsonplaceholder.typicode.com/posts").then(
+      data => data.json()
+    );
 
     dispatch({ type: TEST_FETCH, data });
   } catch (err) {
